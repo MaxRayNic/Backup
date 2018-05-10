@@ -1,0 +1,15 @@
+{{title}}
+{{myId}}
+{{UrlSet}}
+<h1>Search Results Found</h1>
+<div>
+<ul>
+  {{m}}
+
+  <li *ngFor="let item of result">
+    <app-card-fancy  [cardDetails] = item></app-card-fancy>
+
+
+  </li>
+</ul>
+</div>

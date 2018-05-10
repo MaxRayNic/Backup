@@ -1,0 +1,10 @@
+<p>
+  component1 works!
+</p>
+
+
+<br>
+<button type="button"   (click)="getData()">showData </button>
+<input type="text" #Data name="data" >
+<button type="button"   value="Submit" (click)="addData(Data.value)">Add </button>
+<p>random data:{{data}}</p>

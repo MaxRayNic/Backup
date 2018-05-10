@@ -37,13 +37,13 @@ Thumbs.db
 *.git
 atlassian-ide-plugin.xml
 target
-angular
 mvnw
 mvnw.cmd
 docker-compose.yml
 .DS_STORE
 .metadata
 .recommenders
+
 /dist/
 bazel-*
 e2e_test.*

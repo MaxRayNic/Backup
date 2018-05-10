@@ -1,0 +1,41 @@
+<div class ="search-bar">
+<form class="example-form">
+
+<label> Search:</label>
+  <input  #myCuse id="myCuisine" type="text" placeholder="Pick your favourite Cuisine" aria-label="Text"  matInput [formControl] ="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+    </form>
+   <mat-form-field  class="example">
+     <label >Location</label>
+  <mat-select  name = 'myLocation' class="label" [(ngModel)]="myLocation" >
+    <mat-option *ngFor="let location of Location" [value]="location.value"  >
+      {{ location.viewValue }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+<button type="submit" (click)="searchRestaurant(myCuse.value)">Start Your Search!!</button>
+<!-- <ul>
+  <li *ngFor="let item of rest.restaurants">
+    {{item.restaurant.name}}
+    {{item.restaurant.average_cost_for_two}}
+    {{item.restaurant.featured_image}} -->
+    <!-- <ul>
+    <li *ngFor="let var of item.restaurant.user_rating">
+      {{var.aggregate_rating}}
+</li>
+</ul> -->
+<!-- {{item.restaurant.user_rating['aggregate_rating']}}
+{{item.restaurant.location['address']}}
+  </li>
+</ul> -->
+<mat-tab-group>
+  <mat-tab label="Restaurant"><app-display [restaurantsArray] = "rest"></app-display><div class="More">
+  <button type="button" (click)="seeMore(myCuse.value)" >See More!!</button>
+  </div></mat-tab>
+  <mat-tab label="Favourites"><app-display-new [restaurantsArray1]="rest1"></app-display-new></mat-tab>
+</mat-tab-group>

@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>Start of Parent</h1>
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+
+
+  <form action="/action_page.php">
+  First name:<br>
+  <input type="text" #firstname name="firstname"  >
+  <br>
+  Last name:<br>
+  <input type="text" #lastname name="lastname" >
+  <br>
+  <button type="button"   value="Submit" (click)="showName(firstname.value,lastname.value)">click to show Name in current console </button>
+<!-- passing variable to child ,subscribing to child event-->
+  <br>
+  <!--showing Dynamic modification  in webpage  -->
+  Dynamic Input:<br>
+    <input type="text" #thisVar name="type" value="" (keyup)="setF(thisVar.value)">
+<br>
+Dynamic Output:<br>
+<p>{{f}}</p>
+
+
+
+<!--Showing firstName in the console on click-->
+
+
+
+
+<test #anyName [star]="f" (toParent)= "getChild($event)" ></test>
+
+<p>parent has {{m}}</p>
+
+<!-- using child class template to access child variable newVar-->
+
+
+<button type="button"   value="Submit" (click)="show(anyName.newVar)">show child in newVar</button>
+
+<!-- printing parent variable in child console on click in parent section-->
+<button type="button"   value="Submit" (click)="anyName.addConsole(firstname.value)">show in child console</button>
+</form>
+<h1>End of Parent</h1>

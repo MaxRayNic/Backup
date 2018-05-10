@@ -1,0 +1,17 @@
+<p>
+  restaurant-city works!
+</p>
+
+<p> City_name: <input type="text" [(ngModel)]="city_name"></p>
+
+<button (click) = "returnValue()">click</button>
+<button (click) = "returnRes()">click</button>
+
+
+
+
+<ul>
+  <li *ngFor="let it of restaurants.location_suggestions; let i = index">
+    {{i}} {{it.id}}
+  </li>
+</ul>

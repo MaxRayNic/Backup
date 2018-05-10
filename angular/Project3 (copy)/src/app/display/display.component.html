@@ -1,0 +1,17 @@
+<div>
+<ul>
+  <li *ngFor="let item of restaurantsArray.restaurants">
+    <app-card [restaurantDetails] = "item"></app-card>
+    <!-- {{item.restaurant.name}}
+    {{item.restaurant.average_cost_for_two}}
+    {{item.restaurant.featured_image}} -->
+    <!-- <ul>
+    <li *ngFor="let var of item.restaurant.user_rating">
+      {{var.aggregate_rating}}
+</li>
+</ul> -->
+<!-- {{item.restaurant.user_rating['aggregate_rating']}}
+{{item.restaurant.location['address']}} -->
+  </li>
+</ul>
+</div>

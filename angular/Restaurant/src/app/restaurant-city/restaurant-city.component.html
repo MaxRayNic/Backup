@@ -1,0 +1,11 @@
+<p>
+  restaurant-city works!
+</p>
+<input type="text" #Data name="data" >
+<button (click) = "returnValue(Data.value)">click</button>
+<button (click) = "returnRes()">click</button>
+<ul>
+  <li *ngFor="let item of restaurants.restaurants; let i = index">
+    {{i}} {{item.restaurant.name}}
+  </li>
+</ul>

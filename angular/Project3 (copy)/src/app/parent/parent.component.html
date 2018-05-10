@@ -1,0 +1,39 @@
+<div class="parent">
+  <h3>Parent</h3>
+<!-- Part 1 -->
+<!-- <input type="text" #inputName name="firstName"> -->
+<!-- <button (click)="printValue(inputName.value)">Print on console</button> -->
+
+<!-- Part 2 -->
+<!-- <input type="text" #inputName (keyup)="0" name="firstName" value="">
+<br>
+<div>{{inputName.value}}</div>
+<br>
+<br> -->
+<!-- <button (click)="printValue(inputName.value)">Print on console</button> -->
+
+
+<!-- Part 3 -->
+<!-- <div class = "parent">
+  <h3>Parent</h3>
+  <input type="text" (keyup)="0" #inputName name="firstName">
+  <app-child [enteredName] = "inputName.value"></app-child>
+</div> -->
+
+<!-- Part 4 -->
+
+<!-- <div class="parent">
+  So, the child has passed this name: <b>{{ passedName }}</b> <br>
+  <app-child (passingName)="passedName=$event"></app-child>
+
+
+</div> -->
+
+<!-- Part 5 -->
+
+
+  So, the child has passed this name: <b>{{ passedName }}</b>
+  <button (click)="updateGPName()">Pass on to Grand Parent</button>
+  <app-child (passingName)="passedName=$event"></app-child>
+
+</div>

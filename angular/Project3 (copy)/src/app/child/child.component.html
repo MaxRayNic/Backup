@@ -1,0 +1,23 @@
+
+<div class = "child">
+  <!-- part 3
+  <h4> Child </h4>
+  <br>
+  <p>Enter the next value for <b>{{ enteredName }}</b>!! </p>
+
+
+  <!-- <input type="text" #childValue name="Child"> -->
+<!--
+  <button (click)="printChildValue(enteredName)">Print on console</button> -->
+
+
+  <!-- Part 4 -->
+  <h4> Child </h4>
+  <br>
+  <p> Enter the name of to be displayed on the parent of {{ childMessage }}</p>
+
+  <input type="text" #nameOfParent (keyup) = "0">
+
+  <button (click) = "updatePassingName(nameOfParent.value)">Pass it to Parent</button>
+
+</div>

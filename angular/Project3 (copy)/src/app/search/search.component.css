@@ -1,0 +1,19 @@
+.example{
+margin-top: -20px;
+  margin-left: 100px;
+
+}
+.label{
+    background-color: cyan;
+}
+#myCuisine{
+  background-color: lightgrey;
+
+}
+.example-form{
+  float: left;
+  width :20%;
+}
+.More{
+width: 100%;
+}

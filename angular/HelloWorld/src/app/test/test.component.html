@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>Start of Child</h1><br>
+<p>value extracted from parent:</p>
+<!-- Dynamic output from parent -->
+
+{{star}}
+<form action="/action_page.php">
+
+<input type="text" #var2 name="type" value="" (keyup)="setnewVar(var2.value)">
+<!-- emitting value to parent onclick-->
+<button type="button"   (click)="emitString()">passtoParent</button>
+</form>
+<h1>End of child</h1>
