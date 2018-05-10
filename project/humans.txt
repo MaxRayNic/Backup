@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+nirjhar roy--Author--
+    <name> -- <role> -- <twitter>
+
+# THANKS
+Ximanta,Dinesh,Ram ,Anand,Meghana Garima and Vaishnavi
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr

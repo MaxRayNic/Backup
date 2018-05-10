@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean  class="com.stackroute.beans.Triangle" id = "createTriangle">
+<constructor-arg ref="ZeroPoint"></constructor-arg>
+<constructor-arg ><bean class="com.stackroute.beans.Point">
+<constructor-arg type="int" value="4"></constructor-arg>
+<constructor-arg type="int" value ="6"></constructor-arg>
+</bean>
+</constructor-arg>
+<constructor-arg ref="PointC"></constructor-arg>
+</bean>
+<bean class="com.stackroute.beans.Point" id="ZeroPoint">
+<constructor-arg type="int" value="0"></constructor-arg>
+<constructor-arg type="int" value ="0"></constructor-arg>
+</bean>
+<bean class="com.stackroute.beans.Point" id="PointB">
+<constructor-arg type="int" value="5"></constructor-arg>
+<constructor-arg type="int" value ="4"></constructor-arg>
+</bean>
+<bean class="com.stackroute.beans.Point" id="PointC">
+<constructor-arg type="int" value="12"></constructor-arg>
+<constructor-arg type="int" value ="39"></constructor-arg>
+</bean>
+</beans>

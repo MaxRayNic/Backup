@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title>Home</title>
+<body>
+
+<p>Click the button to do a global search for whitespace characters in a string.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = "ab.._";
+    var patt1 = /^[a-zA-Z0-9/#/$/&/'/*/+/-//=/?/^/`/{/|/}/~_]+[/.]?[a-zA-Z0-9/#/$/&'/*/+/-//=/?/^`/{/|/}/~_]+$/;
+    var result = str.match(patt1);
+    var res = patt1.test(str);
+    document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+</body>
+</html>

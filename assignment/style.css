@@ -1,0 +1,15 @@
+blockquote {
+  margin-left: 0px ;
+  text-align: center;
+  border-left: 1px solid white; /* Just change the color value and that's it*/
+  border-top:  1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  vertical-align: middle;
+   height: 50px;
+    width: 500px;
+}
+div{
+	padding-left: 25% ;
+	font-family:arial ;
+}

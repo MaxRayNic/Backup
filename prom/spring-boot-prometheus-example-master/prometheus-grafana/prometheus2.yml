@@ -1,0 +1,110 @@
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+  # scrape_timeout is set to the global default (10s).
+
+  # Attach these labels to any time series or alerts when communicating with
+  # external systems (federation, remote storage, Alertmanager).
+  external_labels:
+      monitor: 'codelab-monitor'
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+
+
+scrape_configs:
+ - job_name: 'springboot'
+   metrics_path: /prometheus
+   static_configs:
+     - targets: ['127.0.0.1:8080']
+
+ - job_name: 'prometheus'
+   scrape_interval: 5s
+   static_configs:
+     - targets: ['127.0.0.1:9090']
+
+ - job_name: 'dialogManager'
+   metrics_path: /apigateway/dialogManager/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'AuthService'
+   metrics_path: /apigateway/AuthService/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'ImageCrawlerService'
+   metrics_path: /apigateway/ImageCrawlerService/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'ContentCrawlerService'
+   metrics_path: /apigateway/ContentCrawlerService/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'OrchestrationService'
+   metrics_path: /apigateway/OrchestrationService/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'UserSearchService'
+   metrics_path: /apigateway/UserSearchService/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'Video-crawler-service'
+   metrics_path: /apigateway/Video-crawler-service/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'Pos-tagging-service'
+   metrics_path: /apigateway/Pos-tagging-service/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'Confidence-score-service'
+   metrics_path: /apigateway/Confidence-score-service/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'Indexer-service'
+   metrics_path: /apigateway/Indexer-service/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'Lemmatization-Service'
+   metrics_path: /apigateway/Lemmatization-Service/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'NLP-service'
+   metrics_path: /apigateway/NLP-service/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'Code-Crawler-service'
+   metrics_path: /apigateway/Code-Crawler-service/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'Recommendation-service'
+   metrics_path: /apigateway/Recommendation-service/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'Neo4jManager'
+   metrics_path: /apigateway/Neo4jManager/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+
+ - job_name: 'SearchService'
+   metrics_path: /apigateway/SearchService/actuator/prometheus
+   static_configs:
+     - targets: ['minerva.stackroute.in']
+

@@ -1,0 +1,104 @@
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+  # scrape_timeout is set to the global default (10s).
+
+  # Attach these labels to any time series or alerts when communicating with
+  # external systems (federation, remote storage, Alertmanager).
+  external_labels:
+      monitor: 'codelab-monitor'
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+
+
+scrape_configs:
+ - job_name: 'springboot'
+   metrics_path: /prometheus
+   static_configs:
+     - targets: ['172.23.239.191:8080']
+
+ - job_name: 'prometheus'
+   scrape_interval: 5s
+   static_configs:
+     - targets: ['localhost:9090']
+
+ - job_name: 'dialogManager'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.189:8082']
+
+ - job_name: 'AuthService'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.189:8090']
+
+ - job_name: 'ImageCrawlerService'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.188:8090']
+
+ - job_name: 'ContentCrawlerService'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.189:8081']
+
+ - job_name: 'OrchestrationService'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.188:8890']
+
+ - job_name: 'UserSearchService'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.188:8091']
+
+ - job_name: 'Video-crawler-service'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.185:8083']
+
+ - job_name: 'Pos-tagging-service'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.185:8086']
+
+ - job_name: 'Confidence-score-service'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.185:8084']
+
+ - job_name: 'Indexer-service'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.191:8051']
+
+ - job_name: 'Lemmatization-Service'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.187:9000']
+
+ - job_name: 'NLP-service'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.187:9001']
+
+ - job_name: 'Code-Crawler-service'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.187:8080']
+
+ - job_name: 'Recommendation-service'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.188:8092']
+
+ - job_name: 'Neo4jManager'
+   metrics_path: /actuator/prometheus
+   static_configs:
+     - targets: ['172.23.239.188:8096']
